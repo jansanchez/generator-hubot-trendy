@@ -2,11 +2,20 @@
 
 const Yeoman = require('yeoman-generator');
 
-module.exports = class Hubot extends Yeoman.Base {
-  method1() {
-    console.log('method 1 just ran');
-  }
-  method2() {
-    console.log('method 2 just ran');
+class Helper extends Yeoman.Base {
+  helper() {
+    console.log('helper ran');
   }
 };
+
+class Generator extends Helper {
+    method1() {
+        console.log('method1 ran');
+        this.helper();
+    }
+    method2() {
+        console.log('method2 ran');
+    }
+};
+
+module.exports = Generator;
