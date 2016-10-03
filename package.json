@@ -1,0 +1,59 @@
+{
+  "name": "generator-hubot-trendy",
+  "version": "1.0.0",
+  "description": "A trendy Yeoman generator for creating your own chatbot using the Hubot framework",
+  "keywords": [
+    "yeoman-generator",
+    "scaffold",
+    "hubot",
+    "front-end",
+    "javascript",
+    "es6",
+    "esnext",
+    "software",
+    "npm"
+  ],
+  "scripts": {
+    "start": "npm run dev",
+    "link": "npm link",
+    "dev": "watch 'yo hubot-trendy'",
+    "lint": "watch 'npm run xo --silent'",
+    "xo": "xo ./generators/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jansanchez/generator-hubot-trendy.git"
+  },
+  "author": {
+    "name": "jansanchez",
+    "email": "joejansanchez@gmail.com",
+    "url": "http://frontendlabs.io/author/jansanchez"
+  },
+  "bugs": {
+    "url": "https://github.com/jansanchez/generator-hubot-trendy/issues"
+  },
+  "homepage": "https://github.com/jansanchez/generator-hubot-trendy#readme",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^0.24.1"
+  },
+  "devDependencies": {
+    "watch": "^0.19.2",
+    "xo": "^0.16.0",
+    "yo": "^1.8.5"
+  },
+  "xo": {
+    "esnext": true,
+    "rules": {
+      "babel/new-cap": 0,
+      "no-undef": 0,
+      "indent": 0,
+      "no-unused-vars": 0
+    }
+  },
+  "main": "generators/app/index.js",
+  "files": [
+    "generators/app",
+    "generators/router"
+  ]
+}
