@@ -16,7 +16,7 @@
   "scripts": {
     "start": "npm run dev",
     "link": "npm link",
-    "dev": "watch 'yo hubot-trendy'",
+    "dev": "watch 'yo hubot-trendy --compact'",
     "lint": "watch 'npm run xo --silent'",
     "xo": "xo ./generators/**/*.js"
   },
