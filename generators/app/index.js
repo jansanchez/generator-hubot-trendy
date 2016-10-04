@@ -11,13 +11,13 @@ class Helper extends Yeoman.Base {
 class Generator extends Helper {
     constructor(args, options) {
       super(args, options);
-
       this.option('compact');
 
       this.compact = this.options.compact || false;
       this.log('compact: ' + this.compact);
 
       this.config.set('compact', this.compact);
+      this.config.set('destination', this.destinationRoot());
       // this.argument('appname', { type: String, required: true });
     }
     prompting() {
