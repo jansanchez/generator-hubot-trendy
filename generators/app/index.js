@@ -14,7 +14,7 @@ class Generator extends Helper {
 
       this.option('compact');
 
-      this.compact = (this.options.compact ? true: false);
+      this.compact = this.options.compact || false;
       this.log('compact: ' + this.compact);
 
       this.config.set('compact', this.compact);
