@@ -37,6 +37,13 @@ class Generator extends Helper {
             this.log('cool feature: ', answers.cool);
         });
     }
+    writing() {
+        this.fs.copyTpl(
+            this.templatePath('.gitignore'),
+            this.destinationPath('build/.gitignore'),
+            {buildPath: 'build/'}
+        );
+    }
     method1() {
         this.log('method1 ran');
         this.helper();

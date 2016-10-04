@@ -41,5 +41,4 @@ npm-debug.log.*
 bower_components/
 
 .git/
-.yo-rc.json
-build/
+<%= buildPath %>
