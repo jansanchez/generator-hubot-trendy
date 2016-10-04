@@ -48,7 +48,8 @@
       "babel/new-cap": 0,
       "no-undef": 0,
       "indent": 0,
-      "no-unused-vars": 0
+      "no-unused-vars": 0,
+      "key-spacing": 0
     }
   },
   "main": "generators/app/index.js",

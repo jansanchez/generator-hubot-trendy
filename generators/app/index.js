@@ -3,12 +3,16 @@
 const Yeoman = require('yeoman-generator');
 
 class Helper extends Yeoman.Base {
-    helper() {
-        console.log('helper ran');
-    }
-};
+  helper() {
+    console.log('helper ran');
+  }
+}
 
 class Generator extends Helper {
+    constructor(args, options) {
+      super(args, options);
+      // this.argument('appname', { type: String, required: true });
+    }
     prompting() {
         return this.prompt([{
             type    : 'input',
@@ -20,7 +24,7 @@ class Generator extends Helper {
             name    : 'cool',
             message : 'Would you like to enable the Cool feature?',
             store   : true
-        }]).then( (answers) => {
+        }]).then(answers => {
             this.log('app name: ', answers.name);
             this.log('cool feature: ', answers.cool);
         });
@@ -32,6 +36,6 @@ class Generator extends Helper {
     method2() {
         console.log('method2 ran');
     }
-};
+}
 
 module.exports = Generator;
