@@ -37,11 +37,11 @@ class Generator extends Helper {
         });
     }
     method1() {
-        console.log('method1 ran');
+        this.log('method1 ran');
         this.helper();
     }
     method2() {
-        console.log('method2 ran');
+        this.log('method2 ran');
     }
 }
 
