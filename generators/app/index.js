@@ -17,7 +17,8 @@ class Generator extends Helper {
       this.log('compact: ' + this.compact);
 
       this.config.set('compact', this.compact);
-      this.config.set('destination', this.destinationRoot());
+      this.config.set('destinationPath', this.destinationRoot());
+      this.config.set('templatePath', this.sourceRoot());
       // this.argument('appname', { type: String, required: true });
     }
     prompting() {
