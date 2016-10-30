@@ -21,6 +21,7 @@ class Generator extends Helper {
       this.config.set('destinationPath', this.destinationRoot());
       this.config.set('templatePath', this.sourceRoot());
       // this.argument('appname', { type: String, required: true });
+      this.botName = 'bot';
     }
     prompting() {
         return this.prompt([{
@@ -36,16 +37,16 @@ class Generator extends Helper {
         }]).then(answers => {
             this.log('app name: ', answers.name);
             this.log('cool feature: ', answers.cool);
+            this.botName = answers.name;
         });
     }
     writing() {
-        this.fs.copyTpl(
-            this.templatePath('.gitignore'),
-            this.destinationPath('build/.gitignore'),
+        this.fs.copyTpl(this.templatePath('.*'), this.destinationPath('build/'),
             {
                 buildPath: 'build/'
             }
         );
+        this.fs.copyTpl(this.templatePath('./bin/hubot'), this.destinationPath('./build/bin/'), this);
     }
     method1() {
         this.log('method1 ran');
