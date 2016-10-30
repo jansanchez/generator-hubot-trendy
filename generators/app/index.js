@@ -11,6 +11,7 @@ class Helper extends Yeoman.Base {
 class Generator extends Helper {
     constructor(args, options) {
       super(args, options);
+      this.log('constructor called');
       this.option('compact');
 
       this.compact = this.options.compact || false;
@@ -41,7 +42,9 @@ class Generator extends Helper {
         this.fs.copyTpl(
             this.templatePath('.gitignore'),
             this.destinationPath('build/.gitignore'),
-            {buildPath: 'build/'}
+            {
+                buildPath: 'build/'
+            }
         );
     }
     method1() {
