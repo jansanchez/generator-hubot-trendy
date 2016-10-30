@@ -21,14 +21,14 @@ class Generator extends Helper {
       this.config.set('destinationPath', this.destinationRoot());
       this.config.set('templatePath', this.sourceRoot());
       // this.argument('appname', { type: String, required: true });
-      this.botName = 'bot';
+      this.botName = 'MyBot';
     }
     prompting() {
         return this.prompt([{
             type    : 'input',
             name    : 'name',
-            message : 'Your project name',
-            default : this.appname
+            message : 'Your bot name',
+            default : this.botName
         }, {
             type    : 'confirm',
             name    : 'cool',
@@ -46,7 +46,8 @@ class Generator extends Helper {
                 buildPath: 'build/'
             }
         );
-        this.fs.copyTpl(this.templatePath('./bin/hubot'), this.destinationPath('./build/bin/'), this);
+        this.fs.copyTpl(this.templatePath('./bin/hubot'), this.destinationPath('./build/bin/hubot'), this);
+        this.fs.copyTpl(this.templatePath('./bin/hubot.cmd'), this.destinationPath('./build/bin/hubot.cmd'), this);
     }
     method1() {
         this.log('method1 ran');
