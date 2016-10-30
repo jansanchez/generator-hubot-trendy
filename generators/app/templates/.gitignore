@@ -34,6 +34,7 @@ npm-debug.log.*
 
 # mac
 .DS_Store
+.DS_Store*
 
 # conflict files
 *.orig
@@ -41,4 +42,9 @@ npm-debug.log.*
 bower_components/
 
 .git/
+
+# hubot files
+.hubot_history
+
+# project files
 <%= buildPath %>
