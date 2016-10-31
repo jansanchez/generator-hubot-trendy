@@ -6,6 +6,12 @@ class Helper extends Yeoman.Base {
   helper() {
     console.log('helper ran');
   }
+  copyFromTemplate(templatePath, destinationPath, data) {
+    if (!data) {
+        data = this;
+    }
+    this.fs.copyTpl(this.templatePath(templatePath), this.destinationPath(destinationPath), data);
+  }
 }
 
 class Generator extends Helper {
@@ -41,13 +47,11 @@ class Generator extends Helper {
         });
     }
     writing() {
-        this.fs.copyTpl(this.templatePath('.*'), this.destinationPath('build/'),
-            {
-                buildPath: 'build/'
-            }
-        );
-        this.fs.copyTpl(this.templatePath('./bin/hubot'), this.destinationPath('./build/bin/hubot'), this);
-        this.fs.copyTpl(this.templatePath('./bin/hubot.cmd'), this.destinationPath('./build/bin/hubot.cmd'), this);
+        const buildPath = './build/';
+
+        this.copyFromTemplate(`.*`, `${buildPath}/`, {buildPath: buildPath});
+        this.copyFromTemplate(`./bin/hubot`, `${buildPath}/bin/hubot`);
+        this.copyFromTemplate(`./bin/hubot.cmd`, `${buildPath}/bin/hubot.cmd`);
     }
     method1() {
         this.log('method1 ran');
