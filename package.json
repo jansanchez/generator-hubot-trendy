@@ -16,7 +16,7 @@
   "scripts": {
     "start": "npm run dev",
     "link": "npm link",
-    "dev": "watch 'yo hubot-trendy --compact'",
+    "dev": "watch 'yo hubot-trendy'",
     "lint": "watch 'npm run xo --silent'",
     "xo": "xo ./generators/**/*.js"
   },
@@ -35,11 +35,11 @@
   "homepage": "https://github.com/jansanchez/generator-hubot-trendy#readme",
   "license": "MIT",
   "dependencies": {
-    "yeoman-generator": "^0.24.1"
+    "yeoman-generator": "^1.0.1"
   },
   "devDependencies": {
-    "watch": "^0.19.2",
-    "xo": "^0.16.0",
+    "watch": "^1.0.1",
+    "xo": "^0.17.1",
     "yo": "^1.8.5"
   },
   "xo": {
@@ -54,7 +54,6 @@
   },
   "main": "generators/app/index.js",
   "files": [
-    "generators/app",
-    "generators/router"
+    "generators/app"
   ]
 }

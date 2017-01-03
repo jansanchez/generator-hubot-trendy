@@ -1,0 +1,9 @@
+{
+  "name": "<%= botName %>",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Jan Sanchez <joejansanchez@gmail.com>",
+  "description": "A simple helpful robot for your Company",
+  "dependencies": {
+  }
+}
