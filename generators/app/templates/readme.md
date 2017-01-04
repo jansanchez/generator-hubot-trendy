@@ -31,3 +31,11 @@ Then you can interact with <%= botName %> by typing `<%= botName %> help`.
     <%= botName %> animate me <query> - The same thing as `image me`, except adds [snip]
     <%= botName %> help - Displays all of the help commands that <%= botName %> knows about.
     ...
+
+Or you too can start with:
+
+```
+HUBOT_SLACK_TOKEN=HERE_YOUR_TOKEN ./bin/hubot --adapter slack
+```
+
+In Slack type `@<%= botName %> hello` and boalá!
