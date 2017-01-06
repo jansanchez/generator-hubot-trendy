@@ -1,6 +1,6 @@
 {
   "name": "generator-hubot-trendy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A trendy Yeoman generator for creating your own chatbot using the Hubot framework",
   "keywords": [
     "yeoman-generator",
