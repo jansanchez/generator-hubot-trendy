@@ -11,6 +11,10 @@ A [Yeoman](http://yeoman.io) generator for creating your own chatbot using the H
 
 - `yo hubot-trendy`
 
+![hubot-trendy](docs/images/hubot-trendy.png)
+
+The code for your bot is in: `./scripts/bot.js`
+
 ## Getting Started
 
 See [Hubot's Getting Started
